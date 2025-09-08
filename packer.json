@@ -19,11 +19,13 @@
       "source_ami": "{{user `source_ami`}}",
       "instance_type": "{{user `instance_type`}}",
       "ssh_username": "ubuntu",
+      "associate_public_ip_address": true, # for-public-ip address
       "ami_name": "Saikiran-Pinapathruni-Build-{{isotime | clean_resource_name}}",
       "vpc_id": "{{user `vpc_id`}}",
       "subnet_id": "{{user `subnet_id`}}",
       "tags": {
         "Name": "Saikiran-Pinapathruni-Build-{{isotime | clean_resource_name}}"
+        
       }
     }],
     "provisioners": [{
