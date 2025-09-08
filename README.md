@@ -72,6 +72,7 @@ packer validate packer.json
 
 
 Build the AMI:
+packer inspect -var-file=packer-vars.json packer.json
 
 packer build -var-file=packer-vars.json packer.json
 
